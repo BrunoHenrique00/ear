@@ -16,7 +16,9 @@ Ear is originally developed to help deaf people, sometimes you encounter a video
 
 ## Video Example
 
-<div style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe src="https://www.loom.com/embed/30ac89aad40b41d09cfe05f1e08c98f8" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+
+
+https://user-images.githubusercontent.com/63210374/213936992-0249f169-b06f-453c-b97e-8958b9dd6909.mp4
 
 ## ❯ CAUTION:
 
