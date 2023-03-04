@@ -1,8 +1,14 @@
 import { exec } from 'child_process';
+import { platform } from 'os';
 import paths from '../configs/paths';
+import sox from './sox';
 
 export function stopRecording() {
-  return new Promise((resolve, reject) => {
+  return new Promise(resolve => {
+    if (platform() === 'win32') {
+      sox.stop();
+      resolve(true);
+    }
     exec('killall sox', () => {
       resolve(true);
     });
@@ -10,7 +16,11 @@ export function stopRecording() {
 }
 
 export default function recordAudioDesktop() {
-  const process = exec(
+  if (platform() === 'win32') {
+    sox.record();
+    return;
+  }
+  exec(
     `bash ${paths.scripts}/audio-desktop.sh -o ${paths.transcribeAudio}`,
     (error, output) => {
       if (!error) {
@@ -20,6 +30,4 @@ export default function recordAudioDesktop() {
       }
     },
   );
-
-  process.once;
 }

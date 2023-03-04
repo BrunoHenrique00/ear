@@ -89,4 +89,10 @@ typings/
 out/
 
 # Whisper related
-whisper/
+whisper/*
+
+# Whisper related
+sox/*
+
+# Temp related
+temp/*

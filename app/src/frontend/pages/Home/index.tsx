@@ -75,11 +75,11 @@ export default function Home() {
             type="primary"
             loading={isLoading}
           >
-            {isRecording ? 'Stop' : 'Start Transcribing'}
+            {isRecording ? 'Parar' : 'Ouvir'}
           </Button>
           <ConfigDropdown />
         </Header>
-        <Divider>Transcription</Divider>
+        <Divider>Transcrições</Divider>
         <Content style={{ height: '100%' }}>
           {text &&
             phrases.map(phrase => (
@@ -87,12 +87,12 @@ export default function Home() {
             ))}
           {!text && (
             <Empty
-              description="No transcription for now."
+              description="Sem transcrições por agora."
               style={{ color: '#f3f8fb' }}
             />
           )}
         </Content>
-        <Footer>Writing the next generation!</Footer>
+        <Footer>Projeto de codigo aberto!</Footer>
       </Layout>
     </ConfigProvider>
   );

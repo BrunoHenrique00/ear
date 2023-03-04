@@ -22,8 +22,12 @@ const createWindow = (): void => {
       nodeIntegration: true,
     },
     alwaysOnTop: true,
-    icon: '../assets/ear.png',
+    show: false,
   });
+
+  mainWindow.on('ready-to-show', mainWindow.show);
+
+  // mainWindow.setIcon(path.join(__dirname, '/ear-logo.ico'));
   // and load the index.html of the app.
   mainWindow.loadURL(MAIN_WINDOW_WEBPACK_ENTRY);
 
@@ -31,8 +35,6 @@ const createWindow = (): void => {
   // Open the DevTools.
   // mainWindow.webContents.openDevTools();
 };
-
-app.commandLine.appendSwitch('js-flags', '--max-old-space-size=4096');
 
 // This method will be called when Electron has finished
 // initialization and is ready to create browser windows.

@@ -21,7 +21,7 @@ export default function ConfigDropdown() {
       icon: <Switch />,
     },
     {
-      label: 'Exit',
+      label: 'Sair',
       key: '2',
       icon: <UserOutlined />,
       danger: true,
@@ -41,7 +41,7 @@ export default function ConfigDropdown() {
       onOpenChange={handleOpenChange}
       open={open}
     >
-      Configurations
+      Configurações
     </Dropdown.Button>
   );
 }

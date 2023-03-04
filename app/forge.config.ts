@@ -10,8 +10,8 @@ import { rendererConfig } from './webpack.renderer.config';
 
 const config: ForgeConfig = {
   packagerConfig: {
-    extraResource: 'scripts',
-    icon: 'assets/ear',
+    extraResource: ['scripts', 'sox', 'whisper', 'temp'],
+    icon: 'assets/ear-logo',
   },
   rebuildConfig: {},
   makers: [
