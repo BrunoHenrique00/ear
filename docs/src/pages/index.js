@@ -25,9 +25,9 @@ function HomepageHeader() {
         <div className={styles.buttons}>
           <Link
             className="button button--secondary button--lg"
-            to="/docs/intro"
+            to="https://drive.google.com/drive/folders/1wnkenivx7QRH4om97bOGaYHbckJDMM_B?usp=share_link"
           >
-            Download ⏱️
+            Download 👂
           </Link>
         </div>
         <iframe
