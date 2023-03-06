@@ -7,7 +7,6 @@ import {
   Typography,
 } from 'antd';
 import { useState } from 'react';
-import ConfigDropdown from '../../components/ConfigDropdown';
 
 const { Content, Header, Footer } = Layout;
 
@@ -77,7 +76,7 @@ export default function Home() {
           >
             {isRecording ? 'Parar' : 'Ouvir'}
           </Button>
-          <ConfigDropdown />
+          {/* <ConfigDropdown /> */}
         </Header>
         <Divider>Transcrições</Divider>
         <Content style={{ height: '100%' }}>
