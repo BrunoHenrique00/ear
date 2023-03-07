@@ -8,6 +8,10 @@ import HomepageFeatures from '@site/src/components/HomepageFeatures';
 import styles from './index.module.css';
 import Translate from '@docusaurus/Translate';
 
+const Windows = {
+  Icon: require('@site/static/img/Windows-logo.svg').default,
+};
+
 function HomepageHeader() {
   return (
     <header className={clsx('hero hero--primary', styles.heroBanner)}>
@@ -22,10 +26,15 @@ function HomepageHeader() {
             on your computer
           </Translate>
         </p>
+
+        <p className="hero__subtitle">
+          <Translate>Support for Windows only!</Translate>
+        </p>
+        <Windows.Icon className={styles.windowsIcon} role="img" />
         <div className={styles.buttons}>
           <Link
             className="button button--secondary button--lg"
-            to="https://drive.google.com/drive/folders/1wnkenivx7QRH4om97bOGaYHbckJDMM_B?usp=share_link"
+            to="https://github.com/BrunoHenrique00/ear/releases/download/v1.0.0/ear-win32-x64.zip"
           >
             Download 👂
           </Link>

@@ -32,3 +32,9 @@
   align-items: center;
   justify-content: center;
 }
+
+.windowsIcon {
+  height: 30px;
+  width: 30px;
+  margin: 5px;
+}
