@@ -7,6 +7,7 @@ import {
   Typography,
 } from 'antd';
 import { useState } from 'react';
+import TutorialButton from '../../../frontend/components/TutorialButton';
 
 const { Content, Header, Footer } = Layout;
 
@@ -77,6 +78,7 @@ export default function Home() {
             {isRecording ? 'Parar' : 'Ouvir'}
           </Button>
           {/* <ConfigDropdown /> */}
+          <TutorialButton />
         </Header>
         <Divider>Transcrições</Divider>
         <Content style={{ height: '100%' }}>
