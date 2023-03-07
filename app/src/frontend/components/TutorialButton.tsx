@@ -5,7 +5,10 @@ const Description = () => {
   return (
     <Typography>
       Siga alguns passos antes de usar o Ear.{' '}
-      <Button type="link" href="https://ear-app.vercel.app/blog/pt/bem-vindo">
+      <Button
+        type="link"
+        href="https://ear-app.vercel.app/pt/blog/setup-tutorial"
+      >
         Seguir Passos!
       </Button>
     </Typography>
