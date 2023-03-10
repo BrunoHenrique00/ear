@@ -1,4 +1,5 @@
 import { ipcMain } from 'electron';
+import store from '../configs/settings';
 import recordAudioDesktop, {
   stopRecording,
 } from '../../scripts/recordAudioDesktop';
@@ -23,6 +24,35 @@ export default function registerMainHandlers() {
       return result;
     } catch (error) {
       console.log('Error on mainHandlers.ts transcriber:', error);
+    }
+  });
+
+  ipcMain.handle('checkFirstTime', () => {
+    try {
+      const isFirstTime = store.get('isFirstTime');
+      store.set('isFirstTime', false);
+      return isFirstTime;
+    } catch (error) {
+      console.log('Error on mainHandlers.ts checkFirstTime:', error);
+    }
+  });
+
+  ipcMain.handle('userPreferences', () => {
+    try {
+      const userPreferences = store.get('userPreferences');
+      return userPreferences;
+    } catch (error) {
+      console.log('Error on mainHandlers.ts userPreferences:', error);
+    }
+  });
+
+  ipcMain.handle('setLanguage', (_, language) => {
+    try {
+      const userPreferences = store.set('userPreferences.language', language);
+      return userPreferences;
+      console.log('Setting language: ', language);
+    } catch (error) {
+      console.log('Error on mainHandlers.ts userPreferences:', error);
     }
   });
 }

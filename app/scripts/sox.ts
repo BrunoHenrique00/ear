@@ -1,5 +1,5 @@
 import { ChildProcess, execFile } from 'child_process';
-import paths from '../configs/paths';
+import paths from '../src/configs/paths';
 import { EventEmitter } from 'events';
 
 const soxEmmiter = new EventEmitter();

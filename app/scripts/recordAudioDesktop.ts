@@ -1,6 +1,6 @@
 import { exec } from 'child_process';
 import { platform } from 'os';
-import paths from '../configs/paths';
+import paths from '../src/configs/paths';
 import sox from './sox';
 
 export function stopRecording() {

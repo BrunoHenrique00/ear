@@ -1,3 +1,5 @@
+import IUserPreferences from './userPreferences';
+
 export {};
 
 declare global {
@@ -8,6 +10,9 @@ declare global {
       transcribe: () => Promise<string>;
       recordDesktopAudioShortCut: (callback) => void;
       stopRecordingShortCut: (callback) => void;
+      checkFirstTime: () => Promise<boolean>;
+      userPreferences: () => Promise<IUserPreferences>;
+      setLanguage: (language: string) => void;
     };
   }
 }
